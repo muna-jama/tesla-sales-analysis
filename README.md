@@ -1,2 +1,2 @@
 # tesla-sales-analysis
-Tesla Sales Analysis project using MYSQL, SQL and BI for insights 
+Tesla Sales Analysis project using MYSQL, SQL, Excel and BI for insights 
