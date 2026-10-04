@@ -1,55 +1,101 @@
 # ᝨ Tesla Sales Analysis Dashboard  <img src="https://img.shields.io/badge/-Tesla-CC0000?style=flat&logo=tesla&logoColor=white"/>
 
-This is an end to end data engineering project associated with the car brand Tesla. The dataset was from the website called Kaggle into a star schema warehouse and an used a visual tool called  power BI dashboard.
+This project demonstrates an end to end data engineering project analysing Tesla data using MySQL, ETL, SQL, Power BI. The project demonstrates the process of taking raw sales data, transforming and modelling it in a relational data warehouse, and producing an interactive dashboard to identify sales trends and business insights.
 
 ## 1. Project Overview
-###### Built a complete ETL pipeline including : 
-- EXTRACT : Downloaded Tesla sale data from Kaggle
-- TRANSFORM : Cleaned, deduplicated and refined the data in MySQL
--  LOAD : Modeled into a star schema for anaylsis
--   ISUALISE : Built a power BI dashboard
+The aim of this project was to transform raw Tesla sales data into a structured dataset suitable for analysis and create a Power BI dashboard to communicate key findings.
 
-### Tools Used
-- MySQL = used this database software for data warehouse
-- SQL = transforming and analysing
-- POWER BI : dashboards and visualisation
-- KAGGLE : data source
+The project followed an ETL and dimensional modelling approach:
 
-### Key Insights
-- Total revenue : £563.68 Million
-- Top selling model : Model Y
-- Top region : North America
-- Total units sold : 12,000
+- **Extract** – Imported Tesla sales data sourced from Kaggle.
+- **Transform** – Cleaned, validated and transformed the raw data using SQL and MySQL.
+- **Load** – Structured the data into a star-schema data warehouse.
+- **Analyse** – Used SQL to investigate sales performance and trends.
+- **Visualise** – Created an interactive Power BI dashboard.
 
-## 2. DATA MODEL
+| Tool | Purpose |
+|---|---|
+| **MySQL** | Data storage, transformation and data warehouse |
+| **SQL** | Data cleaning, validation and analysis |
+| **Power BI** | Data visualisation and dashboard development |
+| **Kaggle** | Source of the dataset |
 
-### Fact table 
-- fact_sales = includes units sold, revenue, discounts
-  
-### Dimension table : 
-- dim_date = when the sale happens
-- dim_region = where the sale happens
-- dim_vehicle = what is sold
+## Data Model
+
+The data was organised into a **star schema** consisting of a central fact table and supporting dimension tables.
+
+### Fact Table
+
+**fact_sales**
+
+Contains measurable sales information, including:
+
+- Units sold
+- Revenue
+- Discounts
+
+### Dimension Tables
+
+**dim_date**
+- Provides information about when each sale occurred.
+
+**dim_region**
+- Provides geographical information about where sales occurred.
+
+**dim_vehicle**
+- Provides information about the Tesla vehicle being sold.
+
+## Key Business Insights
+
+- **Total Revenue:** £563.68 million
+- **Total Units Sold:** 12,000
+- **Top-Selling Model:** Model Y
+- **Top Region:** North America
+
+## SQL Analysis
+
+SQL was used throughout the project for:
+
+- Data profiling
+- Data quality checks
+- Data cleaning
+- Data transformation
+- Creating dimension tables
+- Creating the fact table
+- Analytical queries
+- Validating the final dataset
+
+## Power BI Dashboard
+
+The cleaned and modelled data was connected to Power BI to create an interactive sales dashboard.
+
+The dashboard provides a visual overview of Tesla sales performance, including revenue, units sold, vehicle performance and regional sales.
+
+
+## Skills Demonstrated
+
+- SQL
+- MySQL
+- Data cleaning
+- Data quality validation
+- ETL processes
+- Data warehouse design
+- Star-schema modelling
+- Data analysis
+- Power BI
+- Dashboard development
+- Business insight generation
+
+## Project Outcome
+
+This project demonstrates an end-to-end data engineering workflow, from raw data ingestion and SQL transformation through to data warehouse modelling and business intelligence visualisation. Developed as part of my data engineering portfolio to demonstrate practical skills in **SQL, MySQL, ETL, data warehousing and dimensional modelling**.
 
 
 ## Project Structure
 
-#### tesla_sales_analyis/
-SQL/
- 1. CREATE_DATABASE
- 2. CREATE_RAW_TABLE
- 3. IMPORT_CHECK
- 4. PROFILLING
- 5. QUALITY CHECKS
- 6. STAGING
- 7. DIMENSIONS
- 8. FACTS
- 9. ANALYTICS
+- **SQL/** – SQL scripts for database creation, data import, profiling, quality checks, staging, dimensions, facts and analysis.
+- **dashboard/** – Power BI dashboard files and dashboard images.
+- **.gitignore** – Git configuration file.
+- **LICENSE** – MIT licence.
+- **README.md** – Project documentation.
 
-#### dashboard/
-- tesla_dashboard
-- 2 PNG images used
-
-
-
-README.md 
